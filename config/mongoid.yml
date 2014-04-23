@@ -1,0 +1,19 @@
+development:
+  sessions:
+    default:
+      database: workshops_development
+      hosts:
+        - localhost:27017
+      options:
+  options:
+    # more options go here
+test:
+  sessions:
+    default:
+      database: workshops_test
+      hosts:
+        - localhost:27017
+      options:
+        read: primary
+        max_retries: 1
+        retry_interval: 0
