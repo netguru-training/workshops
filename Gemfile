@@ -8,9 +8,8 @@ gem 'decent_exposure'
 gem 'decent_decoration'
 gem 'devise'
 gem 'simple_form'
-gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
-                              :github => 'anjlab/bootstrap-rails',
-                              :branch => '3.0.0'
+gem 'bootstrap-sass', '~> 3.1.1'
+
 gem 'haml-rails'
 group :assets do
   gem 'sass-rails'
