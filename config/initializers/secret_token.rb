@@ -1,0 +1,1 @@
+Workshops::Application.config.secret_key_base = "d060e2d61a6ae06cdb5f21a1db7b9a6661e118dab884227d4cf7d7b55a84023d43de964381b0bad755ac6bc81de779f0d15f12498c219fc992b2c4c103c7089b"
