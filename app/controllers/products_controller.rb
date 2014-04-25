@@ -1,6 +1,8 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
+  expose(:category)
+
   # GET /products
   def index
     @products = Product.all
@@ -24,7 +26,8 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
 
     if @product.save
-      redirect_to @product, notice: 'Product was successfully created.'
+      category.products << @product
+      redirect_to category_product_url(category, @product), notice: 'Product was successfully created.'
     else
       render action: 'new'
     end
@@ -33,7 +36,7 @@ class ProductsController < ApplicationController
   # PATCH/PUT /products/1
   def update
     if @product.update(product_params)
-      redirect_to @product, notice: 'Product was successfully updated.'
+      redirect_to category_product_url(category, @product), notice: 'Product was successfully updated.'
     else
       render action: 'edit'
     end
@@ -42,7 +45,7 @@ class ProductsController < ApplicationController
   # DELETE /products/1
   def destroy
     @product.destroy
-    redirect_to products_url, notice: 'Product was successfully destroyed.'
+    redirect_to category_url(@product.category), notice: 'Product was successfully destroyed.'
   end
 
   private
@@ -51,8 +54,7 @@ class ProductsController < ApplicationController
       @product = Product.find(params[:id])
     end
 
-    # Only allow a trusted parameter "white list" through.
     def product_params
-      params.require(:product).permit(:title, :description, :price)
+      params.require(:product).permit(:title, :description, :price, :category_id)
     end
 end

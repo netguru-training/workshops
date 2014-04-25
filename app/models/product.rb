@@ -3,4 +3,6 @@ class Product
   field :title, type: String
   field :description, type: String
   field :price, type: Float
+
+  belongs_to :category
 end

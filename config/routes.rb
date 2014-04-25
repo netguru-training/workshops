@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :products
+  resources :categories do
+    resources :products
+  end
 
   root 'products#index'
 end
