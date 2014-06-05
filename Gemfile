@@ -31,12 +31,10 @@ group :development, :test do
 end
 
 group :test do
-  gem 'mongoid-rspec'
   gem 'database_cleaner'
 end
 
 gem 'jquery-rails'
 gem 'rmagick'
 gem 'carrierwave'
-gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 gem 'simple_enum'
