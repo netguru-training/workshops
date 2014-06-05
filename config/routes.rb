@@ -4,5 +4,5 @@ Rails.application.routes.draw do
     resources :products
   end
 
-  root 'products#index'
+  root 'categories#index'
 end
