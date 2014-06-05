@@ -17,7 +17,7 @@ class ProductsController < ApplicationController
   end
 
   def create
-    product = Product.new(product_params)
+    self.product = Product.new(product_params)
 
     if product.save
       category.products << product
@@ -28,7 +28,7 @@ class ProductsController < ApplicationController
   end
 
   def update
-    if product.update(product_params)
+    if self.product.update(product_params)
       redirect_to category_product_url(category, product), notice: 'Product was successfully updated.'
     else
       render action: 'edit'
