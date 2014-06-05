@@ -28,7 +28,6 @@ class CategoriesController < ApplicationController
   end
 
   def update
-    binding.pry
     if category.update(category_params)
       redirect_to category, notice: 'Category was successfully updated.'
     else
