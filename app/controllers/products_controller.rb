@@ -3,6 +3,8 @@ class ProductsController < ApplicationController
   expose(:category)
   expose(:products)
   expose(:product)
+  expose(:review) { Review.new }
+  expose(:reviews, ancestor: :product)
 
   def index
   end
