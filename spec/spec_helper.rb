@@ -32,7 +32,6 @@ RSpec.configure do |config|
   config.order = "random"
 
   config.after(:suite) do
-    DatabaseCleaner.orm = 'mongoid'
     DatabaseCleaner.clean
   end
 end
