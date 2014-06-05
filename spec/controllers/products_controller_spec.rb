@@ -9,6 +9,27 @@ describe ProductsController do
 
   let(:valid_session) { {} }
 
+  context 'user is not singed in' do
+    describe "POST create" do
+      describe "with valid params" do
+        it "redirects user to login page" do
+          post :create, { product: valid_attributes, category_id: category.to_param }, valid_session
+          expect(response).to redirect_to(new_user_session_path)
+        end
+      end
+    end
+
+    describe "PUT update" do
+      describe "with valid params" do
+        it "redirects user to login page" do
+          product = Product.create! valid_attributes
+          put :update, { id: product.to_param, product: { "title" => "MyString" }, category_id: category.to_param }, valid_session
+          expect(response).to redirect_to(new_user_session_path)
+        end
+      end
+    end
+  end
+
   describe "GET index" do
     it "expose all products" do
       product = Product.create! valid_attributes
