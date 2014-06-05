@@ -2,18 +2,18 @@
 
 %p
   %b Title:
-  = @product.title
+  = product.title
 %p
   %b Description:
-  = @product.description
+  = product.description
 %p
   %b Price:
-  = @product.price
+  = product.price
 
 %p
   %b Category
-  = @product.category.name
+  = product.category.name
 
-= link_to 'Edit', edit_category_product_path(category.id, @product.id)
+= link_to 'Edit', edit_category_product_path(category.id, product.id)
 \|
 = link_to 'Back', category_products_path
