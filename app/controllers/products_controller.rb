@@ -4,7 +4,7 @@ class ProductsController < ApplicationController
   expose(:products)
   expose(:product)
   expose(:review) { Review.new }
-  expose(:reviews, ancestor: :product)
+  expose_decorated(:reviews, ancestor: :product)
 
   def index
   end
