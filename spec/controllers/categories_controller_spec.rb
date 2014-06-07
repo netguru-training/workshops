@@ -123,21 +123,19 @@ describe CategoriesController do
     end
 
     describe "PUT update" do
+      let(:category) { Category.create! valid_attributes }
       describe "with valid params" do
         it "updates the requested category" do
-          category = Category.create! valid_attributes
           Category.any_instance.should_receive(:update).with({ "name" => "MyString" })
           put :update, {:id => category.to_param, :category => { "name" => "MyString" }}, valid_session
         end
 
         it "exposes the requested category" do
-          category = Category.create! valid_attributes
           put :update, {:id => category.to_param, :category => valid_attributes}, valid_session
           expect(controller.category).to eq(category)
         end
 
         it "redirects to the category" do
-          category = Category.create! valid_attributes
           put :update, {:id => category.to_param, :category => valid_attributes}, valid_session
           response.should redirect_to(category)
         end
@@ -145,14 +143,12 @@ describe CategoriesController do
 
       describe "with invalid params" do
         it "exposes the category" do
-          category = Category.create! valid_attributes
           Category.any_instance.stub(:save).and_return(false)
           put :update, {:id => category.to_param, :category => { "name" => "invalid value" }}, valid_session
           expect(controller.category).to eq(category)
         end
 
         it "re-renders the 'edit' template" do
-          category = Category.create! valid_attributes
           Category.any_instance.stub(:save).and_return(false)
           put :update, {:id => category.to_param, :category => { "name" => "invalid value" }}, valid_session
           response.should render_template("edit")
@@ -161,15 +157,15 @@ describe CategoriesController do
     end
 
     describe "DELETE destroy" do
+      let(:category) { Category.create! valid_attributes }
+
       it "destroys the requested category" do
-        category = Category.create! valid_attributes
         expect {
           delete :destroy, {:id => category.to_param}, valid_session
         }.to change(Category, :count).by(-1)
       end
 
       it "redirects to the categories list" do
-        category = Category.create! valid_attributes
         delete :destroy, {:id => category.to_param}, valid_session
         response.should redirect_to(categories_url)
       end
