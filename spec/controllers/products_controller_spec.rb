@@ -30,6 +30,53 @@ describe ProductsController do
     end
   end
 
+  context 'another user is singed in' do
+    let(:user) { create(:user) }
+    let(:user2) { build(:user) }
+    let(:product) { Product.create! valid_attributes }
+
+    before do
+      sign_in user2
+      controller.stub(:user_signed_in?).and_return(true)
+      controller.stub(:current_user).and_return(user2)
+      controller.stub(:authenticate_user!).and_return(user2)
+      product.user = user
+    end
+
+    describe "GET edit" do
+      describe "with valid params" do
+        it "redirects to product page" do
+          get :edit, { id: product.to_param, category_id: category.to_param }, valid_session
+          expect(response).to redirect_to(category_product_url(category, product))
+        end
+
+        it "renders error message" do
+          get :edit, { id: product.to_param, category_id: category.to_param }, valid_session
+          expect(controller.flash[:error]).to eq "You are not allowed to edit this product."
+        end
+      end
+    end
+
+    describe "PUT update" do
+      describe "with valid params" do
+        it "redirects to product page" do
+          put :update, { id: product.to_param, product: { "title" => "MyString" }, category_id: category.to_param }, valid_session
+          expect(response).to redirect_to(category_product_url(category, product))
+        end
+
+        it "does not update product" do
+          put :update, { id: product.to_param, product: { "title" => "MyNewString" }, category_id: category.to_param }, valid_session
+          expect(controller.product.title).to_not eq "MyNewString"
+        end
+
+        it "renders error message" do
+          put :update, { id: product.to_param, product: { "title" => "MyString" }, category_id: category.to_param }, valid_session
+          expect(controller.flash[:error]).to eq "You are not allowed to edit this product."
+        end
+      end
+    end
+  end
+
   describe "GET index" do
     it "expose all products" do
       product = Product.create! valid_attributes
