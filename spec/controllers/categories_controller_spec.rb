@@ -108,7 +108,7 @@ describe CategoriesController do
       end
 
       describe "with invalid params" do
-        it "assigns a newly created but unsaved category as @category" do
+        it "exposes a newly created but unsaved category" do
           Category.any_instance.stub(:save).and_return(false)
           post :create, {category: { "name" => "invalid value" }}, valid_session
           expect(controller.category).to be_a_new(Category)
@@ -130,7 +130,7 @@ describe CategoriesController do
           put :update, {:id => category.to_param, :category => { "name" => "MyString" }}, valid_session
         end
 
-        it "assigns the requested category" do
+        it "exposes the requested category" do
           category = Category.create! valid_attributes
           put :update, {:id => category.to_param, :category => valid_attributes}, valid_session
           expect(controller.category).to eq(category)
@@ -144,7 +144,7 @@ describe CategoriesController do
       end
 
       describe "with invalid params" do
-        it "assigns the category" do
+        it "exposes the category" do
           category = Category.create! valid_attributes
           Category.any_instance.stub(:save).and_return(false)
           put :update, {:id => category.to_param, :category => { "name" => "invalid value" }}, valid_session
