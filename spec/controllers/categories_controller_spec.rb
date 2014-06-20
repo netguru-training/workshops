@@ -157,7 +157,7 @@ describe CategoriesController do
     end
 
     describe "DELETE destroy" do
-      let(:category) { Category.create! valid_attributes }
+      let!(:category) { Category.create! valid_attributes }
 
       it "destroys the requested category" do
         expect {
