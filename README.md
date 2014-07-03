@@ -51,4 +51,4 @@ Setup the database for your application (development and test environments):
 
 ## Good Luck! 
 
-** Psst! Do not hesitate to ask your questions on [hipchat](https://www.hipchat.com/gElgOYCSJ) **
+**Psst! Do not hesitate to ask your questions on [hipchat](https://www.hipchat.com/gElgOYCSJ)**
