@@ -50,3 +50,5 @@ Setup the database for your application (development and test environments):
 * not feeling comfortable with JavaScript / jQuery? CodeSchool can help you with this one too - [http://www.codeschool.com/courses/try-jquery](http://www.codeschool.com/courses/try-jquery)
 
 ## Good Luck! 
+
+** Psst! Do not hesitate to ask your questions on [hipchat](https://www.hipchat.com/gElgOYCSJ) **
