@@ -52,4 +52,4 @@ Setup the database for your application (development and test environments):
 ## Good Luck! 
 
 **Psst! Do not hesitate to ask your questions on [hipchat](https://www.hipchat.com/gElgOYCSJ)**
-**And check out event on [facebook](https://www.facebook.com/events/674567292630305/)**
+**And check out event on [facebook](https://www.facebook.com/events/674567292630305/).**
