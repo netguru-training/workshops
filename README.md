@@ -42,10 +42,10 @@ Setup the database for your application (development and test environments):
 
 10. Make sure your project is available on heroku.
 
-### Here are some great resources to help you with kicking off your adventure with Rails:
+### Here are some great resources to help you with kicking off your adventure with Ruby and Rails:
 
 * [http://www.codeschool.com/paths/ruby](http://www.codeschool.com/paths/ruby) - free Ruby and Rails courses available at the elementary level
-* you want to be sure your Rails basis are solid? Check out the Ruby Koans - [http://rubykoans.com/](http://rubykoans.com/)
+* you want to be sure your Ruby basis are solid? Check out the Ruby Koans - [http://rubykoans.com/](http://rubykoans.com/)
 * [http://guides.rubyonrails.org/](http://guides.rubyonrails.org/) - sooner or later this one will come in handy
 * not feeling comfortable with JavaScript / jQuery? CodeSchool can help you with this one too - [http://www.codeschool.com/courses/try-jquery](http://www.codeschool.com/courses/try-jquery)
 
