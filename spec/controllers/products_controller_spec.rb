@@ -1,29 +1,32 @@
 require 'spec_helper'
 
 describe ProductsController do
-
-
-  let(:category) { create(:category) }
-
-  let(:valid_attributes) { { "title" => "MyString", "category_id" => category.id } }
-
-  let(:valid_session) { {} }
+  let(:category)      { create(:category) }
+  let(:valid_session) { Hash.new }
+  let(:valid_attributes) do
+    {
+      title: 'MyString',
+      description: 'Some description',
+      price: 2.5,
+      category_id: category.id,
+    }
+  end
 
   context 'user is not singed in' do
-    describe "POST create" do
-      describe "with valid params" do
-        it "redirects user to login page" do
+    describe 'POST create' do
+      describe 'with valid params' do
+        it 'redirects user to login page' do
           post :create, { product: valid_attributes, category_id: category.to_param }, valid_session
           expect(response).to redirect_to(new_user_session_path)
         end
       end
     end
 
-    describe "PUT update" do
-      describe "with valid params" do
-        it "redirects user to login page" do
+    describe 'PUT update' do
+      describe 'with valid params' do
+        it 'redirects user to login page' do
           product = Product.create! valid_attributes
-          put :update, { id: product.to_param, product: { "title" => "MyString" }, category_id: category.to_param }, valid_session
+          put :update, { id: product.to_param, product: { title: 'MyString' }, category_id: category.to_param }, valid_session
           expect(response).to redirect_to(new_user_session_path)
         end
       end
@@ -36,6 +39,8 @@ describe ProductsController do
     let(:product) { Product.create! valid_attributes }
 
     before do
+      # binding.pry
+      # @request.env["devise.mapping"] = Devise.mappings[:user]
       sign_in user2
       controller.stub(:user_signed_in?).and_return(true)
       controller.stub(:current_user).and_return(user2)
