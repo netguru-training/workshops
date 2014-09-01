@@ -1,22 +1,21 @@
 source 'https://rubygems.org'
-source 'https://rails-assets.org'
+ruby '2.1.2'
 
-gem 'rails', '~> 4.1.1'
+gem 'rails', '4.1.5'
 
 gem 'pg'
 gem 'draper'
 gem 'decent_exposure'
 gem 'decent_decoration'
 gem 'devise'
-gem 'simple_form'
-gem 'bootstrap-sass', '~> 3.1.1'
+gem 'simple_form', '~> 3.1.0rc'
+gem 'bootstrap-sass', '~> 3.2.0'
 gem 'haml-rails'
-gem 'sass-rails'
+gem 'sass-rails', github: 'rails/sass-rails'
 gem 'coffee-rails'
 gem 'uglifier'
 gem 'quiet_assets'
 gem 'jquery-rails'
-gem 'rails-assets-bootstrap-css-only'
 gem 'therubyracer', platforms: :ruby
 
 group :development do
