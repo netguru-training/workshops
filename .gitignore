@@ -4,10 +4,27 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-config/database.yml
+
 /coverage
 
-.powrc
+public/tmp
+public/uploads
+public/javascripts/translations.js
+
+config/mongoid.yml
+config/secrets.yml
+config/database.yml
+
+.rbenv-gemsets
+.rbenv-version
 .powenv
+.env
 .rvmrc
-.ruby-gemset
+.powrc
+
+logfile
+
+local.local.*
+
+# Ignore application configuration
+/config/application.yml
