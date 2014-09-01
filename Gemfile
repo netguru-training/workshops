@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+source 'https://rails-assets.org'
 
 gem 'rails', '~> 4.1.1'
 
@@ -9,13 +10,13 @@ gem 'decent_decoration'
 gem 'devise'
 gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.1.1'
-
 gem 'haml-rails'
-
 gem 'sass-rails'
 gem 'coffee-rails'
 gem 'uglifier'
-
+gem 'quiet_assets'
+gem 'jquery-rails'
+gem 'rails-assets-bootstrap-css-only'
 gem 'therubyracer', platforms: :ruby
 
 group :development do
@@ -32,8 +33,3 @@ end
 group :test do
   gem 'database_cleaner'
 end
-
-gem 'jquery-rails'
-gem 'rmagick'
-gem 'carrierwave'
-gem 'simple_enum'
