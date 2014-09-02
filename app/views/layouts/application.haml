@@ -9,7 +9,13 @@
     = javascript_include_tag 'application'
 
   %body
-    .container
+    %nav.navbar.navbar-default
+      .container-fluid
+        .navbar-header
+          %span.navbar-brand Netguru Kraków Workshops 2014
+        %p.navbar-text.navbar-right
+          Links should go here
+    .container-fluid
       .row
         .col-lg-12
           = yield
