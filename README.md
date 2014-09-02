@@ -20,10 +20,11 @@ Setup the database for your application (development and test environments):
 ### Issues to solve:
 
 1. There are a few missing fields on the `User` model. Make sure `spec/models/user_spec.rb passes.`
+
 2. Make sure settings for [devise](https://github.com/plataformatec/devise) are
    configured properly.  If they aren’t, most of the controller specs will fail: 
   * Most of the configuration changes require the server to be restarted.
-  * At some point you'll have to overwrite the default devise views - you can find all the required info in the gem readme.
+  * At some point **you'll have to overwrite the default devise views** - you can find all the required info in the gem readme.
   
 3. Check `spec/controllers/categories_controller_spec.rb` - there should be a
    couple errors on actions checking admin presence.
@@ -32,15 +33,37 @@ Setup the database for your application (development and test environments):
 
 5. Fix specs for `Category` model.
 
-6. You'll have to deal with `ProductsController`. Again, you'll have to check for permissions. Only a product owner should be able to make changes. Make sure to give the user a proper message when they try to perform forbidden actions.
+6. Fix specs for `Review` model.
 
-7. Make sure `ReviewDecorator` is used properly, There's one action which needs to be declared there. See `spec/decorators/review_decorator_spec.rb` for details.
+7. You'll have to deal with `ProductsController`. Again, you'll have to check for permissions. Only a product owner should be able to make changes. Make sure to give the user a proper message when they try to perform forbidden actions.
 
-8. Don't forget to check if application works in the browser:)
+8. Make sure `ReviewDecorator` is used properly, There's one action which needs to be declared there. See `spec/decorators/review_decorator_spec.rb` for details.
 
-9. Unleash your design skills. Add some CSS to the application to make it prettier (we won't say it's ugly, but you know, it's not a beauty [YET!]).
+9. Check if each review is assigned to user who wrote it.
 
-10. Make sure your project is available on heroku.
+10. If some actions are not allowed for a particular user then please hide them.
+
+11. In navigation bar insert links for guest users to login / signup and for users that are already logged in - to logout.
+
+12. Don't forget to check if application works in the browser :).
+
+13. Unleash your design skills. Add some CSS to the application to make it prettier (we won't say it's ugly, but you know, it's not a beauty [YET!]). Please use [Bootstrap 3](http://getbootstrap.com/css/) for styling, which is already added to application. Psss! Don't forget about styling `devise` views :).
+
+14. Create (and style whatever you like, but using `Bootstrap 3`) user profile and put a link to in on the top navigation bar.
+
+15. On user profile list 5 last user's reviews with formated date (dd-mm-yy).
+
+16. Fill seeds with user to login and example category with products and reviews.
+
+17. Make sure your project is available on Heroku with **seeds data**.
+
+## What disqualifies your application
+
+1. Tests are not passing.
+
+2. Website doesn't work on Heroku.
+
+3. Design is not finished.
 
 ### Here are some great resources to help you with kicking off your adventure with Ruby and Rails:
 
