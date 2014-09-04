@@ -41,7 +41,7 @@ Setup the database for your application (development and test environments):
 
 9. Check if each review is assigned to user who wrote it.
 
-10. If some actions are not allowed for a particular user then please hide them.
+10. If some actions (like links to edit a page, create a new one) are not allowed for a particular user then please hide them in a template (for example with `if`).
 
 11. In navigation bar insert links for guest users to login / signup and for users that are already logged in - to logout.
 
@@ -49,11 +49,11 @@ Setup the database for your application (development and test environments):
 
 13. Unleash your design skills. Add some CSS to the application to make it prettier (we won't say it's ugly, but you know, it's not a beauty [YET!]). Please use [Bootstrap 3](http://getbootstrap.com/css/) for styling, which is already added to application. Psss! Don't forget about styling `devise` views :).
 
-14. Create (and style whatever you like, but using `Bootstrap 3`) user profile and put a link to in on the top navigation bar.
+14. Create user profile page (using Boostrap 3). Use your imagination about what should go there. You can start with name, email, etc.
 
 15. On user profile list 5 last user's reviews with formated date (dd-mm-yy).
 
-16. Fill seeds with user to login and example category with products and reviews.
+16. Fill `seeds.rb` with 5 accounts for user and one admin account to login and example category with products and reviews.
 
 17. Make sure your project is available on Heroku with **seeds data**.
 
