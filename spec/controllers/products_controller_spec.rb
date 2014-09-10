@@ -209,7 +209,8 @@ describe ProductsController do
 
   describe 'DELETE destroy' do
     let(:user) { create(:user) }
-    let(:product) { Product.create! valid_attributes }
+    let(:category) { create(:category) }
+    let(:product) { create(:product, user: user, category: category) }
 
     context 'user is signed in' do
       before do

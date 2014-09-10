@@ -18,6 +18,7 @@ gem 'quiet_assets'
 gem 'jquery-rails'
 gem 'therubyracer', platforms: :ruby
 gem 'travis'
+gem 'ffaker'
 
 group :development do
   gem 'spring'
