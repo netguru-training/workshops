@@ -15,9 +15,10 @@ describe Product do
     end
 
     describe '#average_rating' do
+      let(:user)    { create(:user) }
       let(:product) { create(:product) }
-      let(:review1) { create(:review, rating: 2) }
-      let(:review2) { create(:review, rating: 3) }
+      let(:review1) { create(:review, rating: 2, user: user) }
+      let(:review2) { create(:review, rating: 3, user: user) }
 
       before do
         product.reviews << [review1, review2]
