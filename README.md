@@ -74,4 +74,4 @@ Setup the database for your application (development and test environments):
 
 ## Good Luck! 
 
-**And check out event on [facebook](https://www.facebook.com/events/1558485497706978).**
+**Check out event on [facebook](https://www.facebook.com/events/1558485497706978).**
