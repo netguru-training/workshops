@@ -2,7 +2,7 @@
 
 All attendees, mentors and volunteers at our workshops are required to agree with the following code of conduct. Organisers will enforce this code throughout the event. We are expecting cooperation from all participants to help ensuring a safe environment for everybody.
 
-**tl;dr: Don’t be a Jerk**
+*tl;dr: Don’t be a Jerk*
 
 ### YOU NEED HELP?
 
@@ -10,7 +10,7 @@ Send an email to workshops@netguru.co.
 
 ### THE QUICK VERSION
 
-Our event is dedicated to providing a harassment-free workshop experience for everyone, regardless of gender, sexual orientation, disability, physical appearance, body size, race, or religion. We do not tolerate harassment of events participants in any form. Sexual language and imagery is not appropriate for any events venue, including talks, workshops, parties, Twitter and other online media. Workshop participants violating these rules may be sanctioned or expelled from the event at the discretion of the conference organisers.
+Our event is dedicated to providing a harassment-free workshop experience for everyone, regardless of gender, sexual orientation, disability, physical appearance, body size, race, or religion. We do not tolerate harassment of events participants in any form. Sexual language and imagery is not appropriate for any events venue, including talks, workshops, parties, Twitter and other online media. Workshop participants violating these rules may be sanctioned or expelled from the event at the discretion of the event organisers.
 
 ### THE LESS QUICK VERSION
 
@@ -18,7 +18,7 @@ Harassment includes offensive verbal comments related to gender, sexual orientat
 
 Participants asked to stop any harassing behavior are expected to comply immediately.
 
-f a participant engages in harassing behavior, the event organizers may take any action they deem appropriate, including warning the offender or expulsion from the event.
+If a participant engages in harassing behavior, the event organizers may take any action they deem appropriate, including warning the offender or expulsion from the event.
 
 If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of workshop staff immediately.
 
