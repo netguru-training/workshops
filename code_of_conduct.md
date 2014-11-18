@@ -26,4 +26,4 @@ Event staff will be happy to help participants contact hotel/venue security or l
 
 We expect participants to follow these rules at workshop venues and workshops-related social events.
 
-Adapted from [eurocamp](http://2014.eurucamp.org/policies/).
+Adapted from [eurucamp](http://2014.eurucamp.org/policies/).
