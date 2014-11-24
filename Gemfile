@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
-ruby '2.1.2'
 
-gem 'rails', '4.1.5'
+gem 'rails', '4.1.8'
 
 gem 'pg'
 gem 'draper'
@@ -19,6 +18,7 @@ gem 'jquery-rails'
 gem 'therubyracer', platforms: :ruby
 gem 'travis'
 gem 'ffaker'
+gem 'konf'
 
 group :development do
   gem 'spring'
@@ -34,3 +34,5 @@ end
 group :test do
   gem 'database_cleaner'
 end
+
+ruby '2.1.5'
