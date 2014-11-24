@@ -1,0 +1,11 @@
+defaults: &defaults
+  workshops_name: 'Netguru Poznań Workshops 2014'
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
