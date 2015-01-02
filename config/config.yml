@@ -1,5 +1,5 @@
 defaults: &defaults
-  workshops_name: 'Netguru Poznań Workshops 2014'
+  workshops_name: 'Netguru Wrocław Workshops 2015'
 
 development:
   <<: *defaults
