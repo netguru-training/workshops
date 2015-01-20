@@ -4,6 +4,10 @@ Hi! We think it’s great that you want to **join along with Netguru** to start 
 
 ### Let’s start with a setup:
 
+**Source code**
+
+Don't fork the repository. Clone it (`git clone git@github.com:netguru-training/workshops.git`) and make a new one – we want all of you to have equal chances.
+
 **Database**
 
 Copy the database config file (and edit if needed): 
